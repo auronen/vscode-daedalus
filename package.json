@@ -28,14 +28,15 @@
   },
   "publisher": "Kirides",
   "activationEvents": [
-    "onLanguage:daedalus"
+    "onLanguage:daedalus",
+    "onLanguage:modelscript"
   ],
   "contributes": {
     "configuration": {
       "type": "object",
       "title": "Language Server Configuration",
       "properties": {
-        "daedalusLanguageServer.fileEncoding": {
+        "daedalusLanguageServer.files.encoding": {
           "type": "string",
           "default": "Windows-1252",
           "enum": ["Windows-1250", "Windows-1251", "Windows-1252"],
