@@ -34,18 +34,13 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "Language Server Configuration",
+      "title": "Daedalus",
       "properties": {
-        "daedalusLanguageServer.files.encoding": {
+        "daedalusLanguageServer.daedalusEncoding": { 
           "type": "string",
-          "default": "Windows-1252",
-          "enum": ["Windows-1250", "Windows-1251", "Windows-1252"],
-          "description": "The file encoding"
-        },
-        "daedalusLanguageServer.srcFileEncoding": {
-          "type": "string",
-          "default": "Windows-1252",
-          "enum": ["Windows-1250", "Windows-1251", "Windows-1252"],
+          "default": "windows1252",
+          "enum": ["windows1250", "windows1251", "windows1252"],
+          "enumDescriptions": ["Windows-1250" , "Windows-1251", "Windows-1252"],
           "description": "The file encoding"
         }
       }
