@@ -22,11 +22,11 @@
     "arm64"
   ],
   "license": "MIT",
-  "version": "0.0.18",
+  "version": "0.0.20",
   "engines": {
     "vscode": ">=1.65.0"
   },
-  "publisher": "Kirides",
+  "publisher": "Kirides & Auronen",
   "activationEvents": [
     "onLanguage:daedalus",
     "onLanguage:modelscript"
@@ -41,7 +41,19 @@
           "default": "windows1252",
           "enum": ["windows1250", "windows1251", "windows1252"],
           "enumDescriptions": ["Windows-1250" , "Windows-1251", "Windows-1252"],
-          "description": "The file encoding"
+          "description": "Editor file encoding"
+        },
+        "daedalusLanguageServer.fileEncoding": {
+          "type": "string",
+          "default": "Windows-1252",
+          "enum": ["Windows-1250", "Windows-1251", "Windows-1252"],
+          "description": "Server side `.d` script file encoding"
+        },
+        "daedalusLanguageServer.srcFileEncoding": {
+          "type": "string",
+          "default": "Windows-1252",
+          "enum": ["Windows-1250", "Windows-1251", "Windows-1252"],
+          "description": "Server side `.src` source file encoding"
         }
       }
     },
@@ -92,7 +104,15 @@
         "language": "modelscript",
         "path": "./snippets/modelscript.json"
       }
-    ]
+    ],
+    "commands": [
+      {
+        "command": "daedalus.dls-hello",
+        "title": "Dls-hello",
+        "description": "Test command."
+
+      }
+    ]    
   },
   "main": "./out/extension.js",
   "scripts": {
