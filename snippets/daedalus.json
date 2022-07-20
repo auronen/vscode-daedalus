@@ -41,14 +41,15 @@
 	"If-Statement": {
 		"prefix": "if",
 		"body": [
-			"if ($1) {",
+			"if ($1)",
+			"{",
 			"\t$0",
 			"};"
 		],
 		"description": "If-Statement"
 	},
 	"Function": {
-		"prefix": [ "func", "function"],
+		"prefix": [ "func"],
 		"body": [
 			"func ${1|void,int,string|} ${2:Function name} (${3:Parameters})",
 			"{",
@@ -58,7 +59,7 @@
 		"description": "function template"
 	},
 	"Dialogue": {
-		"prefix": [ "c_info", "dialogue", "dia"],
+		"prefix": [ "dia"],
 		"body": [
 			"instance $1_${2:Dialog name}(C_INFO)",
 			"{",
@@ -72,11 +73,15 @@
 
 			"func int $1_$2_Condition()",
 			"{",
-			"\t$6",
+			"\tif ($6)",
+			"\t{",
+			"\t\treturn TRUE;",
+			"\t};",
 			"};\n",
 			
 			"func void $1_$2_Info()",
 			"{",
+			"\tAI_Output(other, self, \"$1_$2_15_00\"); //$5",
 			"\t$0",
 			"};"
 

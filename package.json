@@ -22,7 +22,7 @@
     "arm64"
   ],
   "license": "MIT",
-  "version": "0.0.18",
+  "version": "0.0.20",
   "engines": {
     "vscode": ">=1.65.0"
   },
@@ -32,6 +32,31 @@
     "onLanguage:modelscript"
   ],
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "dls-translation",
+          "title": "Daedalus",
+          "icon": "media/gothic.svg"
+        }
+      ]
+    },
+    "views": {
+      "dls-translation": [
+        {
+          "id": "dlsTranslation",
+          "name": "Translation",
+          "icon": "media/gothic.svg",
+          "contextualTitle": "Daedalus"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "dlsTranslation",
+        "contents": "Warning: Make sure you set the correct language and encoding [settings](command:workbench.action.openSettings2).\n Click the button to generate files for translation.\n[Generate translation files](command:daedalus.dls-hello)\nMaybe we could also show some warnings and other things."
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "Daedalus",
@@ -103,6 +128,18 @@
       {
         "language": "modelscript",
         "path": "./snippets/modelscript.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "daedalus.dls-hello",
+        "title": "Daedalus: Generate const csv",
+        "description": "Test command #1."
+      },
+      {
+        "command": "daedalus.dialogues",
+        "title": "Daedalus: Generate dialogue csv",
+        "description" : "Test command #2."
       }
     ]
   },
