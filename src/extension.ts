@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
 	} else if (platform === 'darwin') {
 		serverExe = path.join(context.extensionPath, 'languageserver', 'DaedalusLanguageServer_darwin');
 	} else if (platform == 'linux') {
-		serverExe = path.join(context.extensionPath, 'languageserver', 'DaedalusLanguageServer_linux');
+		serverExe = path.join(context.extensionPath, 'languageserver', 'DaedalusLanguageServer.x64');
 	};
 	
 	let serverOptions: ServerOptions = {
