@@ -54,7 +54,7 @@
     "viewsWelcome": [
       {
         "view": "dlsTranslation",
-        "contents": "Warning: Make sure you set the correct language and encoding [settings](command:workbench.action.openSettings2).\n Click the button to generate files for translation.\n[Generate translation files](command:daedalus.dls-hello)\nMaybe we could also show some warnings and other things."
+        "contents": "Warning: Make sure you set the correct language and encoding [settings](command:workbench.action.openSettings2).\n Click the button to generate files for translation.\n[Generate translation files](command:daedalus.dls-constants)\nMaybe we could also show some warnings and other things."
       }
     ],
     "configuration": {
@@ -132,14 +132,9 @@
     ],
     "commands": [
       {
-        "command": "daedalus.dls-hello",
-        "title": "Daedalus: Generate const csv",
-        "description": "Test command #1."
-      },
-      {
-        "command": "daedalus.dialogues",
-        "title": "Daedalus: Generate dialogue csv",
-        "description" : "Test command #2."
+        "command": "daedalus.dls-all",
+        "title": "Daedalus: Generate All",
+        "description": "Generates CSV file containing everything."
       }
     ]
   },
