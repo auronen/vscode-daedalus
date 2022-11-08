@@ -85,7 +85,8 @@ func void CreateInvItem(var instance npc, var int itemInstance) {};
 ///
 /// @param npc {c_npc} target NPC
 /// @param itemInstance {c_item} item to be created
-func void CreateInvItems(var instance par0, var int par1, var int par2) {};
+/// @param count number of items to be created
+func void CreateInvItems(var instance npc, var int itemInstance, var int count) {};
 func int Npc_GetInvItem(var c_npc self, var int itemInstance) {};
 func int Npc_GetInvItembyslot(var c_npc self, var int category, var int slotnr) {};
 /// Removes one item from NPC's inventory
